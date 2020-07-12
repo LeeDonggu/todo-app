@@ -17,13 +17,13 @@ const App = () => {
     },
     {
       id: 3,
-      text: '일정 관리 앱 만들어보기',
+      text: '일정 관리 앱 만들어 보기',
       checked: false,
     },
   ]);
 
-  // 고윳값으로 사용될 ID
-  // ref를 사용하여 변수 담기
+  // 고유 값으로 사용 될 id
+  // ref 를 사용하여 변수 담기
   const nextId = useRef(4);
 
   const onInsert = useCallback(
@@ -31,10 +31,10 @@ const App = () => {
       const todo = {
         id: nextId.current,
         text,
-        chekced: false,
+        checked: false,
       };
       setTodos(todos.concat(todo));
-      nextId.current += 1; // nextId 1씩 더하기
+      nextId.current += 1; // nextId 1 씩 더하기
     },
     [todos],
   );
